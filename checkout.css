@@ -10,7 +10,7 @@ body.checkout-bg {
   align-items: center;
   background-image:
     linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url("https://images.unsplash.com/photo-1520975922219-6a175af84f57?auto=format&fit=crop&w=1600&q=90");
+    url("https://thumbs.dreamstime.com/b/modern-clothing-boutique-exterior-front-view-shopping-mall-glass-facade-apparel-collection-interior-lights-fashionable-wear-retail-385300014.jpg);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -159,3 +159,4 @@ body.checkout-bg {
     padding: 8px 10px;
   }
 }
+
