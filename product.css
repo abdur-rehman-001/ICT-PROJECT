@@ -1,0 +1,281 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY BACKGROUND */
+.products-bg {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  min-height: 100vh;
+  color: white;
+}
+
+/* NAVBAR */
+.lux-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo span {
+  color: gold;
+}
+
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: rgba(182, 212, 12, 0.1);
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: gold;
+  color: black;
+  font-weight: bold;
+}
+
+/* PAGE TITLE */
+.lux-title {
+  text-align: center;
+  font-size: 48px;
+  margin: 40px 0 20px;
+  letter-spacing: 2px;
+}
+
+/* CATEGORIES */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.cat-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cat-btn:hover,
+.cat-btn.active {
+  background: gold;
+  color: black;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-size: 28px;
+  margin: 30px 50px 20px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+/* PRODUCT GRID */
+.lux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 50px 60px;
+}
+
+/* GLASSMORPHISM CARDS */
+.lux-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.lux-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+}
+
+/* PRODUCT IMAGE */
+.lux-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.lux-card:hover img {
+  transform: scale(1.05);
+}
+
+/* PRODUCT INFO */
+.lux-info {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lux-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.lux-info p {
+  color: gold;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* DESCRIPTION BUTTON */
+.desc-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.desc-btn:hover {
+  background: gold;
+  color: black;
+}
+
+/* POPUP */
+.premium-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  background: rgba(0,0,0,0.95);
+  padding: 35px;
+  width: 360px;
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+  animation: popupFade 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@keyframes popupFade {
+  from {transform: scale(0.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+.popup-content select,
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.cart-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, gold, #ffcc00);
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  opacity: 0.9;
+}
+
+.close {
+  align-self: flex-end;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .lux-nav {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .categories {
+    justify-content: center;
+  }
+
+  .lux-grid {
+    padding: 0 20px 50px;
+    gap: 20px;
+  }
+
+  .lux-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin: 20px 20px 15px;
+  }
+
+  .lux-info h3 {
+    font-size: 18px;
+  }
+
+  .lux-info p {
+    font-size: 15px;
+  }
+}
+
+
+.follow{
+   position: absolute;
+   left:41%;
+}
+footer {
+    text-align: center;
+    padding: 16px;
+    background-color: #111;}
+    .logos{
+    border-radius: 20%;
+    width:30px;
+    height:30px;
+    position: static;
+}
+
