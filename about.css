@@ -1,0 +1,152 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://thumbs.dreamstime.com/b/modern-clothing-boutique-exterior-front-view-shopping-mall-glass-facade-apparel-collection-interior-lights-fashionable-wear-retail-385300014.jpg')
+    no-repeat center center / cover;
+
+  /* Fix: allows background to fill entire page */
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  color: #fff;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 30px;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: #ffd700;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 215, 0, 0.6);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.back-btn a:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+/* GLASS EFFECT CONTAINER */
+.about-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 45px 35px;
+  border-radius: 18px;
+
+  /* Premium glass effect */
+  background: rgba(31, 29, 29, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(31, 29, 29, 0.08);
+
+  box-shadow: 0 20px 40px rgba(31, 29, 29, 0.08);
+}
+
+/* HEADINGS */
+.about-container h1 {
+  font-size: 38px;
+  margin-bottom: 18px;
+  background: linear-gradient(to right, #ffd700, #ffcc33);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.about-container h2 {
+  font-size: 28px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding-bottom: 6px;
+
+  background: linear-gradient(to right, #ffd700, #e6c200);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-bottom: 2px solid rgba(255,215,0,0.6);
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e4e4e4;
+}
+
+/* TEAM SECTION */
+.team-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  flex: 1 1 260px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+
+  background: rgba(23, 21, 21, 0.12);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(20, 18, 18, 0.1);
+
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.team-member:hover {
+  background: #ffd700;
+  transform: translateY(-5px);
+}
+
+/* DEFAULT TEXT (yellow, light gray) */
+.team-member h3 {
+  color: #ffd700;   /* default yellow */
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: #ddd;
+  font-size: 16px;
+}
+
+/* CHANGE TEXT TO BLACK ON HOVER */
+.team-member:hover h3,
+.team-member:hover p {
+  color: #000 !important;
+}
+/* !important is added because your glass background + gradient styles sometimes override hover styles.
+Adding !important ensures the hover color always applies.*/
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .about-container {
+    padding: 30px 20px;
+  }
+
+  .team-section {
+    flex-direction: column;
+  }
+}
+
+

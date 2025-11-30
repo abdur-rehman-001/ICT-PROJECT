@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Fashion Fusion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body class="checkout-bg">
+
+  <div class="form-box">
+    <h2>Place Your Order</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Address" required>
+      <input type="text" placeholder="Phone Number" required>
+
+      <div class="payment-method">
+        <p>Select Payment Method</p>
+        <label>
+          <input type="radio" name="payment" value="card" checked>
+          <span class="method-card">Credit/Debit Card</span>
+        </label>
+        <label>
+          <input type="radio" name="payment" value="paypal">
+          <span class="method-card">PayPal</span>
+        </label>
+        <label>
+          <input type="radio" name="payment" value="cod">
+          <span class="method-card">Cash on Delivery</span>
+        </label>
+      </div>
+
+      <button type="submit">Place Order</button>
+      <button type="button" class="back-btn" onclick="window.location.href='cart.html'">← Back to Cart</button>
+    </form>
+  </div>
+
+</body>
+</html>
